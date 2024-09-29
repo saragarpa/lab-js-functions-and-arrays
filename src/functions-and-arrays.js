@@ -20,10 +20,9 @@ function findLongestWord(wordsArr) {
         return null;
     }
 
-    let longestWord = '';
-    for (let i = 0; i <= wordsArr.length - 1; i++){
+    let longestWord = wordsArr[0];
+    for (let i = 0; i < wordsArr.length; i++){
         const word = wordsArr[i];
-
         if (word.length > longestWord.length) {
             longestWord = word;
         }
@@ -62,8 +61,8 @@ function averageNumbers(numArr) {
     }
 
     let sum = sumNumbers(numArr);
-
     let average = sum / numArr.length; 
+
     return average;
 }
 
@@ -83,7 +82,7 @@ function doesWordExist(wordsArr, wordSearch) {
         let word = wordsArr[i];
         if (word === wordSearch) {
             return true;
-        } 
+        }
     }
     return false;
 }
